@@ -1,12 +1,18 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const PORTFOLIO_DIR = '/Users/hetprajapati/Portfolio';
-const SCRATCH_DIR = '/Users/hetprajapati/.gemini/antigravity/scratch/portfolio-website';
-const PUBLIC_DIR = path.join(SCRATCH_DIR, 'public');
-const SRC_DIR = path.join(SCRATCH_DIR, 'src');
-const SYMLINK_PATH = path.join(PUBLIC_DIR, 'portfolio_projects');
-const DATA_FILE_PATH = path.join(SRC_DIR, 'projects-data.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const ROOT_DIR = __dirname;
+
+const PORTFOLIO_DIR = path.join(ROOT_DIR, "Portfolio");
+const PUBLIC_DIR = path.join(ROOT_DIR, "public");
+const SRC_DIR = path.join(ROOT_DIR, "src");
+
+const SYMLINK_PATH = path.join(PUBLIC_DIR, "portfolio_projects");
+const DATA_FILE_PATH = path.join(SRC_DIR, "projects-data.json");
 
 // Ensure directories exist
 if (!fs.existsSync(PUBLIC_DIR)) {
@@ -113,10 +119,10 @@ const projects = [];
 folders.forEach(folderName => {
   const fullPath = path.join(PORTFOLIO_DIR, folderName);
   const stats = fs.statSync(fullPath);
-  
+
   if (stats.isDirectory()) {
     const cleanId = folderName.trim().toLowerCase().replace(/\s+/g, '_');
-    
+
     // Look for video file
     let videoFile = null;
     try {
@@ -128,7 +134,7 @@ folders.forEach(folderName => {
     } catch (e) {
       console.warn(`Error reading folder ${folderName}:`, e.message);
     }
-    
+
     // Get metadata template or generate generic fallback
     const meta = PROJECT_META[cleanId] || {
       title: folderName.trim().replace(/_/g, ' '),
@@ -138,11 +144,11 @@ folders.forEach(folderName => {
       role: 'Robotics Engineering Student',
       highlights: ['Demonstrates key mechanical and electrical design concepts.', 'Implemented firmware using C++ / Arduino.']
     };
-    
-    const videoUrl = videoFile 
-      ? `/portfolio_projects/${encodeURIComponent(folderName)}/${encodeURIComponent(videoFile)}` 
+
+    const videoUrl = videoFile
+      ? `/portfolio_projects/${encodeURIComponent(folderName)}/${encodeURIComponent(videoFile)}`
       : null;
-      
+
     projects.push({
       id: cleanId,
       folderName: folderName,
