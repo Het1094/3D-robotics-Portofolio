@@ -1,0 +1,120 @@
+[
+  {
+    "id": "gesture_car",
+    "folderName": "Gesture_car ",
+    "title": "Gesture Controlled Car",
+    "subtitle": "Station 01 // Interactive Control Link",
+    "description": "A human-robot interface deck streaming hand tracking telemetry via computer vision. Hand landmarks are analyzed in real-time, mapping coordinates to drive signals transmitted wirelessly (Bluetooth/Wi-Fi) to an ESP32 microcontroller, driving differential steering motors.",
+    "techStack": [
+      "Python",
+      "MediaPipe",
+      "OpenCV",
+      "ESP32 / Arduino",
+      "C++",
+      "Kinematics",
+      "Wi-Fi Socket Client"
+    ],
+    "role": "Station Operations Engineer",
+    "highlights": [
+      "Engineered hand-landmark tracking node with less than 45ms loop latency.",
+      "Designed a UDP packet streaming protocol for wireless motion coordination.",
+      "Calculated differential drive motor kinematics for vector-based translations.",
+      "Calibrated speed-attenuation logic relative to physical hand depth metrics."
+    ],
+    "videoFile": "IMG_2394.MOV",
+    "videoUrl": "/portfolio_projects/Gesture_car%20/IMG_2394.MOV"
+  },
+  {
+    "id": "kuka",
+    "folderName": "Kuka",
+    "title": "KUKA Robotics Simulation",
+    "subtitle": "Station 02 // Manipulator Control Bay",
+    "description": "Simulation and trajectory planning deck for heavy industrial robotic arms. This station operates path generation algorithms, inverse kinematics solvers, and automation loops designed to minimize cycle times while avoiding layout-defined obstacles.",
+    "techStack": [
+      "RoboDK",
+      "KUKA Robot Language (KRL)",
+      "Inverse Kinematics",
+      "Path Planning",
+      "Python API",
+      "3D CAD Modeling"
+    ],
+    "role": "Kinematics Simulation Lead",
+    "highlights": [
+      "Synthesized multi-point industrial routines in joint-space (PTP) and linear-space (LIN).",
+      "Configured RoboDK environment with collision-detection nodes.",
+      "Programmed Python interface API to pass coordinates dynamically to the manipulator arm.",
+      "Reduced pathway cycle-time bounds by 15% through trajectory optimization."
+    ],
+    "videoFile": "Screen Recording 2026-06-07 at 11.55.05 PM.mov",
+    "videoUrl": "/portfolio_projects/Kuka/Screen%20Recording%202026-06-07%20at%2011.55.05%E2%80%AFPM.mov"
+  },
+  {
+    "id": "line_follower",
+    "folderName": "Line_follower",
+    "title": "Line Follower Robot",
+    "subtitle": "Station 03 // Transit Dynamics Deck",
+    "description": "Calibration deck for high-speed tracking vehicles. Features an embedded system processing multiple analog IR sensor values, feeding a high-frequency PID control loop. The vehicle maintains center-line tracking at maximum speeds through acute curves.",
+    "techStack": [
+      "Arduino / C++",
+      "QTR-8A IR Sensor Array",
+      "PID Feedback Control",
+      "PWM Motor Control",
+      "Differential Drive Kinematics"
+    ],
+    "role": "Control Systems Operator",
+    "highlights": [
+      "Designed high-frequency proportional-integral-derivative (PID) feedback algorithms.",
+      "Built automatic IR emitter calibration scripts to normalize ambient light offsets.",
+      "Coded traction-vector controls to counter centrifugal force on sharp curves.",
+      "Tested stable tracking speeds of up to 1.5 meters per second."
+    ],
+    "videoFile": "recorded-22957455160588.MP4",
+    "videoUrl": "/portfolio_projects/Line_follower/recorded-22957455160588.MP4"
+  },
+  {
+    "id": "radar_system",
+    "folderName": "Radar_system",
+    "title": "Ultrasonic Radar System",
+    "subtitle": "Station 04 // Scanning Radar Terminal",
+    "description": "A surveillance and telemetry console. An ultrasonic distance sensor rotates on a micro-servo axis, logging distance readings every degree. Data is packetized, sent over serial, and visualized in real-time on a retro radar terminal mockup.",
+    "techStack": [
+      "Arduino / C++",
+      "Processing IDE",
+      "Servo Control",
+      "Ultrasonic Sensors",
+      "Serial Data Streaming"
+    ],
+    "role": "Interface & Hardware Lead",
+    "highlights": [
+      "Designed coordinate packet structure for Serial-to-UI data transmission.",
+      "Developed a retro, vector-styled green CRT scanning visualizer in Processing.",
+      "Implemented rolling median filters in Arduino C++ to eliminate measurement spikes.",
+      "Integrated threshold alarm logic to trigger audible/visual alerts on coordinate breach."
+    ],
+    "videoFile": "IMG_9056.mov",
+    "videoUrl": "/portfolio_projects/Radar_system/IMG_9056.mov"
+  },
+  {
+    "id": "vinebot",
+    "folderName": "Vinebot",
+    "title": "ROS2 Vineyard Robot",
+    "subtitle": "Station 05 // Field Rover Diagnostic Bay",
+    "description": "Agricultural field rover concept designed for autonomous navigation and field diagnostics. Operates layout-based mapping and localization scripts, using sensor fusion models to plan path navigation through narrow agricultural corridors.",
+    "techStack": [
+      "ROS2 (Robot Operating System)",
+      "Python",
+      "GPS / RTK Navigation",
+      "LiDAR Sensor Fusion",
+      "SLAM (Gmapping)",
+      "OpenCV"
+    ],
+    "role": "Autonomous Systems Designer",
+    "highlights": [
+      "Drafted modular ROS2 nodes structure separating navigation, localization, and imaging.",
+      "Simulated SLAM grid mapping in Gazebo virtual vineyard environments.",
+      "Optimized path planning heuristics for tight-turning, narrow crop rows.",
+      "Calculated power draw configurations for solar-assisted batteries."
+    ],
+    "videoUrl": null
+  }
+]

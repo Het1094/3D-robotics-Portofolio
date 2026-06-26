@@ -1,0 +1,26 @@
+{
+  "name": "het-prajapati-3d-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scan": "node scan-projects.js",
+    "dev": "npm run scan && vite",
+    "build": "npm run scan && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/postprocessing": "^2.19.1",
+    "framer-motion": "^12.42.0",
+    "gsap": "^3.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0"
+  }
+}
